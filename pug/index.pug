@@ -1,0 +1,62 @@
+extends layout.pug
+
+block content
+  
+  section.hero.section
+    .hero__img
+      +webp('hero', 'jpg')
+    .hero__align
+      .wrapper
+        .hero__container
+          .label Приложение DrivExpert 
+          h1.hero__title Инструктор в вашем смартфоне
+          p.hero__subtitle Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения
+
+ 
+  .wrapper
+    section.section
+      .container.prems
+        - for (var i = 1; i < 7; i++)
+          .col.col--sm-6
+            .prem
+              .prem__img
+                +webp('prem-1', 'png')
+              h3.prem__title Обучающие материалы по основам пилотирования
+              p Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения
+              .prem__icon
+                img(src="./img/prem-icon-" + i + ".svg", alt="")
+
+
+  .wrapper
+    section.section
+      .heading
+        h2 Версии Drive Expert
+
+
+
+    section.section
+      .heading
+        h2 Приложение выставляет оценку после завершения круга
+        p Учитывается не только скорость прохождения, но и безопасность и стиль вождения. Лучшие результаты попадают в таблицу рекордов и отображаются на сайте. А вы сможете обогнать Дениса?
+        
+
+
+    section.section
+      .heading
+        h2 Приложения от гонщиков для гонщиков
+        p Мы знаем толк в гонках. Для нас было целью создать приложение которое было бы полезно фанатам гонок. Для таких же как мы.
+
+
+    section.section
+      .heading.heading_small
+        h2 Новости
+      .news
+        a(href="").new
+          .new__left
+            .new__title Обновлённая версия приложения 1.0.1 для Android
+            time.date.new__date 02.05.2020
+          .new__right
+            .new__os
+              img(src="./img/android.svg", alt="")
+
+

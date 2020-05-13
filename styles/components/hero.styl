@@ -1,0 +1,56 @@
+.hero
+  position relative
+  &__img
+    height 100vh
+    max-height 72rem
+    position relative
+    img
+      object-fit cover
+      height 100%
+      width 100%
+  &__align
+    align-items center
+    display flex
+    height 100%
+    left 0
+    position absolute
+    top 0
+    width 100%
+    z-index 20
+  &__container
+    flex-shrink 0
+    max-width 38rem
+  &__title
+    color #fff
+    font-size 8rem
+    font-weight 700
+    line-height 1
+    max-width 56rem
+    margin-bottom .25em
+  &__subtitle
+    color #fff
+    margin-bottom 1.5em
+
+
+
+@media(max-width 1200px)
+  .hero
+    margin-bottom 8rem
+    &__title
+      font-size 4.8rem
+
+
+
+@media(max-width 767px)
+  .hero
+    &__align
+      align-items flex-end
+    &__container
+      padding-bottom 12rem
+      text-align center
+    &__title
+      font-size 4rem
+    &__subtitle
+      margin-bottom 1em
+
+

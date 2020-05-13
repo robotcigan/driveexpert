@@ -1,0 +1,39 @@
+
+
+
+.news
+  .new
+    align-items center
+    border-bottom $border
+    border-top $border
+    display flex
+    justify-content space-between
+    padding 3.2rem 0
+    verticalBgHover($primary)
+    &:before
+      left -10%
+      width 120%
+    &__title
+      font-size 2.4rem
+      font-weight 600
+      margin-bottom .5em
+      transition $transition
+    &__date
+      transition $transition
+    &__os
+      display flex
+      justify-content center
+      width 4rem
+      img
+        transition $transition
+    &:hover
+      .new
+        &__title
+          color #fff
+        &__date
+          color #fff
+        &__os
+          img
+            filter contrast(3)
+            opacity .7
+

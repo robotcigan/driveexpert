@@ -1,0 +1,93 @@
+// .text-animation
+//   div
+//     opacity 0
+//     transform translateY(1em)
+//     transition $transition2
+//     for num in 1..12
+//       &:nth-child({num})
+//         transition-delay (num / 15)s
+//   &.animated
+//     div
+//       opacity 1
+//       transform none
+
+.fade-up
+  opacity 0
+  transform translate3d(0, 8rem, 0)
+  // transition all 1s cubic-bezier(.16,1.08,.38,.98) .08s
+  transition transform ease 1s, opacity 1s ease
+  &.animated
+    opacity 1
+    transform none
+
+
+// .animation-up
+//   opacity 0
+//   transform translate3d(0, 8rem, 0)
+//   transition all 2s cubic-bezier(.16,1.08,.38,.98) .08s
+//   transition-delay .08s
+//   &.animated
+//     opacity 1
+//     transform none
+
+// .animation-parent
+//   overflow hidden
+//   height 100%
+//   // width 0
+//   clip-path inset(0 100% 0 0)
+//   // transition width 1s cubic-bezier(.4,0,0,1)
+//   transition clip-path 1s cubic-bezier(.4,0,0,1)
+//   .animation
+//     display block
+//     transition transform .6s cubic-bezier(.4,0,0,1) .2s
+//     transform scale(1.2)
+//   &.animated
+//     // width 100%
+//     clip-path inset(0 0 0 0)
+//     .animation
+//       transform none
+
+// .animation-up-slide
+//   overflow hidden
+//   clip-path inset(100% 0 0 0)
+//   transition all 2s cubic-bezier(.16,1.08,.38,.98) .08s
+//   img
+//     transition all 2s cubic-bezier(.16,1.08,.38,.98)
+//     transform scale(1.2)
+//   &.animated
+//     clip-path inset(0 0 0 0)
+//     img
+//       transform none
+
+// .fade-container
+//   .fade-item
+//     opacity 0
+
+// .ul-animation
+//   li
+//     &:before
+//       width 0
+//   &.animated
+//     li
+//       &:before
+//         width 2.4rem
+
+// hr
+//   &.wow
+//     transition all 2s cubic-bezier(.16,1.08,.38,.98) .2s
+//     width 0
+//   &.animated
+//     width 100%
+    
+
+@keyframes bigFadeUp
+  0%
+    transform translateY(10rem)
+  100%
+    transform none
+
+@keyframes bigFadeDown
+  0%
+    transform none
+  100%
+    transform translateY(10rem)

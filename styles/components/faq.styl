@@ -1,0 +1,50 @@
+.faq
+  border-bottom $border
+  &:first-child
+    .faq
+      &__title
+        padding-top 0
+  &__container
+    position relative
+  &__top
+    align-items center
+    cursor pointer
+    display flex
+    justify-content space-between
+    &:hover
+      .faq
+        &__arrow
+          img
+            filter invert(100%)
+          &:after
+            transform none
+  &__arrow
+    circleHover(4rem, #eee)
+    position relative
+    transition $transition
+    &:after
+      background-color $second
+    img
+      transition $transition
+  &__title
+    font-size 2.4rem
+    line-height 1.2
+    padding 1em 0
+    padding-right 1.5em
+  &__text
+    display none
+    color $gray-text
+    padding-right 12rem
+    p
+      color $gray-text
+  &_active
+    .faq
+      &__arrow
+        transform rotate(180deg)
+        &:before
+          background-color $gray
+        img
+          filter invert(100%)
+
+
+

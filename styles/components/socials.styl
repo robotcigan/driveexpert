@@ -1,0 +1,68 @@
+.socials
+  display flex
+  // justify-content center
+
+.social
+  align-items center
+  // background-color $light-gray
+  // border 2px solid $main
+  border-radius 50%
+  size(7.2rem)
+  display inline-flex
+  justify-content center
+  margin-bottom 1.6rem
+  position relative
+  &:before,
+  &:after
+    border-radius 50%
+    bottom 0
+    content ''
+    left 0
+    margin auto
+    position absolute
+    right 0
+    top 0
+    transition $transition
+    z-index 0
+  &:before
+    background-color $light-gray
+    // border 2px solid $main
+    // opacity .1
+    size(5.6rem)
+  &:after
+    background-color $light-gray - 6%
+    size(0)
+  &:not(:last-child)
+    margin-right .8rem
+  img
+    position relative
+    z-index 10
+  &:hover
+    // img
+    //   filter invert(100%)
+    &:before
+      opacity 0
+      size(7.2rem)
+    &:after
+      size(6.4rem)
+
+
+.socials
+  &_white
+    img
+      filter invert(100%)
+    .social
+      &:hover
+        img
+          filter invert(0%)
+      &:before
+        border-color #fff
+      &:after
+        background-color #fff
+
+
+@media(max-width 767px)
+  .social
+    circle(3.2rem)
+    img
+      transform scale(.7)

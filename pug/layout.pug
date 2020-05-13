@@ -1,0 +1,168 @@
+mixin webp(name, format)
+  picture
+    source(srcset="./img/webp/" + name + ".webp" type="image/webp" alt="")
+    img(src="./img/" + name + "." + format + "" , alt="")
+
+block condition
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Клиника Глазуновой
+    meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    link(rel="stylesheet", href="./styles/css/vendor.css")
+    link(rel="stylesheet", href="./styles/css/main.css")
+  body
+
+    //- .cursor
+    //-   .cursor__zoom
+    //-     img(src="./img/zoom.svg", alt="")
+    //-   .cursor__before
+    //-   .cursor__arrow.cursor__arrow_left
+    //-     img(src="./img/slider-arrow-left.svg", alt="")
+    //-   .cursor__arrow.cursor__arrow_right
+    //-     img(src="./img/slider-arrow-right.svg", alt="")
+
+
+    .mobile-menu-bg
+
+    .mobile-menu
+      .mobile-menu__container
+        .mobile-menu__nav
+          .mobile-menu-accordion
+            .mobile-menu__link.mobile-menu__link_big Услуги
+            .mobile-menu__link-section
+              .mobile-menu__link-container
+                .mobile-menu__link: a(href="") Рекламные ролики
+                .mobile-menu__link: a(href="") Корпоративные фильмы
+                .mobile-menu__link: a(href="") Клипы
+                .mobile-menu__link: a(href="") Телепрограммы
+                .mobile-menu__link: a(href="") Анимационные ролики
+              .mobile-menu__link-container
+                .mobile-menu__link: a(href="") Рекламные ролики
+                .mobile-menu__link: a(href="") Корпоративные фильмы
+                .mobile-menu__link: a(href="") Клипы
+                .mobile-menu__link: a(href="") Телепрограммы
+                .mobile-menu__link: a(href="") Анимационные ролики
+
+
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Портфолио
+          .mobile-menu__link.mobile-menu__link_big: a(href="") О нас
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Клиенты
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Блог
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Фотоальбом
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Вакансии
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Отзывы
+        .mobile-menu__phone-container
+          a(href="tel:79882459001").mobile-menu__phone +7 988 245-90-01
+        .btn
+          .btn__text Рассчитать стоимость
+
+
+
+    main.page
+      header.header
+        .header__container.wrapper
+          .header__left
+            a(href="./pages.html").logo
+              img(src="./img/logo.svg", alt="").svg
+            .nav
+              .nav__link: a(href="./about.html") О клинике
+              .dropdown
+                .dropdown__container
+                  .dropdown__section
+                    .dropdown__link.dropdown__link_big: a(href="") О клинике
+                    .dropdown__list
+                      .dropdown__link: a(href="") Рекламные ролики
+                      .dropdown__link: a(href="") Корпоративные фильмы
+                      .dropdown__link: a(href="") Клипы
+                      .dropdown__link: a(href="") Телепрограммы
+                  .dropdown__section
+                    .dropdown__list
+                      .dropdown__link: a(href="") Бактерии
+                      .dropdown__link: a(href="") Дрожжи
+                      .dropdown__link: a(href="") Инактивированные дрожжи
+                      .dropdown__link: a(href="") Подкормка
+                      .dropdown__link: a(href="") Ферменты
+                  .dropdown__section
+                    .dropdown__link.dropdown__link_big: a(href="") Другое
+                    .dropdown__list
+                      .dropdown__link: a(href="") Бактерии
+                      .dropdown__link: a(href="") Дрожжи
+                      .dropdown__link: a(href="") Инактивированные дрожжи
+                      .dropdown__link: a(href="") Подкормка
+                      .dropdown__link: a(href="") Ферменты
+
+              .nav__link: a(href="./specialists.html") Специалисты
+              .nav__link: a(href="./services.html") Услуги
+              .nav__link: a(href="./price.html") Цены
+              .nav__link: a(href="./contacts.html") Контакты
+          .header__right
+            .header__phone-container
+              a(href="tel:79882459001").header__phone +7 988 245-90-01
+            .header-button Оплатить онлайн
+            .header-button Записаться
+            .burger
+
+      block content
+      
+
+
+      footer.footer
+        .wrapper
+          .container
+            .col.col--xxl-3.col--lg-3
+              .logo
+                img(src="./img/logo.svg", alt="").svg
+            .col.col--xxl-2.col--lg-2.col--xs-6
+              .footer__link: a(href="") Услуги
+              .footer__link: a(href="") Портфолио
+              .footer__link: a(href="") Клиенты
+              .footer__link: a(href="") Блог
+              .footer__link: a(href="") Фотоальбом
+              .footer__link: a(href="") О нас
+            .col.col--xxl-2.col--lg-2.col--xs-6
+              .footer__link: a(href="") Отзывы
+              .footer__link: a(href="") Вакансии
+              .footer__link: a(href="") Контакты
+              .footer__link: a(href="") Анкета для кастинга
+              .footer__link: a(href="") Бриф на разработку
+              .footer__link: a(href="") Политика конфиденциальности
+            .col.col--xxl-2.col--lg-1.dn-lg
+            .col.col--xxl-3.col--lg-4
+              a(href="").footer__phone +7 988 245-90-01
+              a(href="").footer__mail zakaz@mediaheads.ru
+              .socials.socials_white
+                a(href="").social.social_insta
+                  img(src="./img/insta.svg", alt="")
+                a(href="").social.social_vk
+                  img(src="./img/vk.svg", alt="")
+                a(href="").social.social_facebook
+                  img(src="./img/facebook.svg", alt="")
+          .footer__bottom.animation-up.wow
+            .copyright 2020, © Компания «Media Heads»
+            p.disclamer Дополнительные материалы взяты из открытых источников
+
+
+
+
+
+    script(src="./js/jquery-2.2.1.min.js")
+    script(src="./js/TweenMax.min.js")
+    script(src="./js/ScrollMagic.min.js")
+    script(src="./js/debug.addIndicators.min.js")
+    script(src="./js/animation.gsap.min.js")
+    script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
+    script(src="./js/smoothscroll.js")
+    //- script(src="./js/smoothscroll-js.js")
+    //- script(src="./js/anotherscroll.js")
+    script(src="./js/swiper.min.js")
+    script(src="./js/wow.min.js")
+    script(src="./js/jquery.inputmask.bundle.min.js")
+    script(src="./js/jquery.nice-select.min.js")
+    script(src="./js/main.js")
+    script(src="./js/animations.js")

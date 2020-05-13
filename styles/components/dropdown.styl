@@ -1,0 +1,60 @@
+// .nav
+//   &__link
+//     a
+//       &:hover
+//         & + .dropdown
+//           opacity 1
+
+
+.nav
+  &__link
+    &:hover
+      & + .dropdown
+        opacity 1
+        pointer-events initial
+
+
+.dropdown
+  box-shadow 0 8px 8px -4px rgba($main, .2)
+  background-color #fff
+  display flex
+  justify-content center
+  // bottom -3.2rem
+  left 0
+  opacity 0
+  // position absolute
+  position fixed
+  pointer-events none
+  transition $transition
+  transform translateY(1rem)
+  top 8.6rem
+  width 100%
+  z-index 200
+  &__container
+    display flex
+    padding-bottom 4rem
+    padding-top 4rem
+    width 80rem
+  &__section
+    // opacity 0
+    transition all 1s cubic-bezier(.16,1.08,.38,.98)
+    transform translateY(1.6rem)
+    for num in 2..3
+      &:nth-child({num})
+        transition-delay ((num - 1) / 10) s
+    &:not(:last-child)
+      margin-right 8rem
+  &__link
+    display block
+    margin-bottom 1em
+    a
+      linkHover($primary)
+    &_big
+      font-weight 800
+      letter-spacing 1px
+      margin-bottom 1em
+      text-transform uppercase
+  
+  &:hover
+    opacity 1
+    pointer-events initial

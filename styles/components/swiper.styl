@@ -1,0 +1,84 @@
+.slider
+  background-color $main
+  position relative
+  img
+    display block
+    width 100%
+  &__control
+    content ''
+    cursor pointer
+    height 100%
+    position absolute
+    top 0
+    width 15%
+    z-index 10
+    &_left
+      left 0
+      &:hover
+        & + .slider__control_right + .swiper-container .swiper-wrapper
+          margin-left 15%
+    &_right
+      right 0
+      &:hover
+        & + .swiper-container .swiper-wrapper
+          margin-left -15%
+  .swiper
+    &-wrapper
+      transition $transition
+      transition-duration .4s !important
+    &-container
+      transition $transition
+    &-pagination
+      display none
+
+.slider-scroll-overflow
+  overflow hidden
+
+.slider-scroll
+  &__container
+    // overflow hidden
+    padding-right 8rem
+    width calc(100vw - ((100vw - 99% ) / 2))
+  .swiper
+    &-slide
+      width initial
+    //   width 40rem
+    &-wrapper
+      align-items flex-end
+      display flex
+    &-container
+      overflow visible
+    &-container-horizontal > .swiper-scrollbar
+      // bottom 0
+      cursor grab
+      left 0
+      margin-top 4rem
+      position relative
+    &-scrollbar-drag
+      background-color $primary
+
+
+@media(max-width 1200px)
+  .slider-scroll
+    .swiper
+      &-wrapper
+        align-items initial
+      &-slide
+        // margin-right 1.6rem !important
+        img
+          max-width 20rem
+          width 100%
+  .slider
+    background-color #fff
+    .swiper
+      &-pagination
+        display block
+        margin-top 1.6rem
+        position initial
+        &-bullet
+          &-active
+            background-color $primary
+
+
+
+

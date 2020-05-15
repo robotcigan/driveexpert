@@ -1,13 +1,24 @@
 .hero
+  background-color #000
   position relative
+  &__img-container
+    overflow hidden
   &__img
     height 100vh
     max-height 72rem
+    // overflow hidden
     position relative
     img
+      opacity .1
       object-fit cover
       height 100%
+      transition all 5s ease .5s
+      transform translateX(-2rem)
       width 100%
+    &.animated
+      img
+        opacity 1
+        transform none
   &__align
     align-items center
     display flex
@@ -18,18 +29,65 @@
     width 100%
     z-index 20
   &__container
+    align-items center
+    display flex
+    height 100%
+    overflow hidden
+    position relative
+    &.animated
+      .label,
+      .hero__subtitle,
+      .downloads
+        opacity 1
+        transform none
+  &__text-width
     flex-shrink 0
     max-width 38rem
+  .label
+    opacity 0
+    transition $transition
+    transform translateY(2em)
   &__title
     color #fff
-    font-size 8rem
+    font-size 6.4rem
     font-weight 700
-    line-height 1
+    line-height .7
     max-width 56rem
     margin-bottom .25em
   &__subtitle
     color #fff
     margin-bottom 1.5em
+    opacity 0
+    transition $transition
+    transform translateY(2em)
+    transition-delay .2s
+  .downloads
+    opacity 0
+    transition $transition
+    transform translateY(2em)
+    transition-delay .4s
+
+.hero
+  &__phones
+    align-items flex-end
+    display flex
+    bottom 0
+    position absolute
+    right 0
+    .hero__phone
+      transition $transition2
+      &:nth-child(1)
+        transform translate(1rem, 100%)
+      &:nth-child(2)
+        transform translateY(100%)
+        transition-delay .1s
+    &.animated
+      .hero__phone
+        &:nth-child(1)
+          transform translate(1rem, 0)
+        &:nth-child(2)
+          transform translateY(0)
+
 
 
 

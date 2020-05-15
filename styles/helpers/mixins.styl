@@ -39,6 +39,9 @@ circleHover($circleSize, $circleBg)
   flex-shrink 0
   justify-content center
   size($circleSize)
+  img
+    position relative
+    z-index 10
   &:before,
   &:after
     background-color $circleBg
@@ -68,19 +71,29 @@ verticalBgHover($color)
   position relative
   &:before
     background-color $color
+    bottom 0
     content ''
     height 0
     left 0
     position absolute
-    top 0
-    transition $transition
+    // top 0
+    transition height $bezier .4s
     width 100%
     z-index -1
   &:hover
     &:before
+      top 0
       height 100%
 
 
+imageShadow()
+  &:after
+    background-color rgba(#000, .4)
+    content ''
+    left 0
+    position absolute
+    size(100%)
+    top 0
 
 clearfix()
   &:after

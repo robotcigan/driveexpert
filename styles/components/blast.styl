@@ -1,0 +1,40 @@
+.blast-text
+  // line-height 1.2
+  // overflow hidden
+  .blast-parent
+    // background rgba(teal, .5)
+    display inline-block
+    margin-right .3em
+    overflow hidden
+  .blast
+    display inline-block
+    transition transform .7s cubic-bezier(.165, .84, .44, 1)
+    // transition all .5s ease
+    // transform translateY(1em)
+    transform translate3d(0, 1em, 0)
+    vertical-align text-top
+  // &--hidden
+  //   .blast
+  //     opacity 0
+  &--visible.animated
+    .blast
+      opacity 1
+      transform none
+
+
+// .hero__description
+//   overflow hidden
+//   .blast
+//     display inline-block
+//     transition all .5s
+//     transform translateY(2rem)
+//   &--hidden
+//     .blast
+//       opacity 0
+//   &--visible
+//     .blast
+//       opacity 1
+//       transform none
+
+.basic-animation
+  opacity 0

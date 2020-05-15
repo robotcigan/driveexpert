@@ -1,18 +1,22 @@
-
-
-
 .news
   .new
     align-items center
-    border-bottom $border
-    border-top $border
+    // border-top $border
     display flex
     justify-content space-between
+    opacity 0
     padding 3.2rem 0
     verticalBgHover($primary)
+    transform translateY(4rem)
+    transition $transition2
+    for num in 1..10
+      &:nth-child({num})
+        transition-delay ((num - 1) / 10) s
     &:before
       left -10%
       width 120%
+    &:not(:last-child)
+      border-bottom $border
     &__title
       font-size 2.4rem
       font-weight 600
@@ -35,5 +39,15 @@
         &__os
           img
             filter contrast(3)
-            opacity .7
+            // opacity .7
+  &.animated
+    .new
+      opacity 1
+      transform none
+
+
+
+
+
+
 

@@ -1,20 +1,15 @@
 .header
-  background-color rgba(#fff, .9)
-  backdrop-filter saturate(180%) blur(20px)
   left 0
-  position sticky
+  // position sticky
+  position fixed
   top 0
+  // transition $transition
+  transition background-color .4s $bezier
   width 100%
   z-index 100
-  &__progress
-    background-color $primary
-    height 2px
-    left 0
-    position absolute
-    top 0
-    width 0
   &__container
     align-items center
+    border-bottom 1px solid rgba(#fff, .2)
     display flex
     justify-content space-between
     transition $transition2
@@ -24,46 +19,49 @@
   &__right
     align-items center
     display flex
-  &__phone
-    font-weight 500
-    margin-right 1.2rem
-    &-container
-      align-items center
-      display flex
-      margin-right 2.4rem
-      position relative
   .logo
     flex-shrink 0
     max-width 20rem
     margin-right 2.4em
-
+    img
+      filter brightness(0) invert(1)
+      transition $transition
+  &_scroll
+    background-color rgba(#fff, .8)
+    backdrop-filter saturate(180%) blur(12px)
+    // .header
+    //   &__container
+    //     border-bottom $border
+    .logo
+      img
+        filter initial
+    .nav
+      &__link
+        a
+          color $main
+          &:hover
+            color $primary
 
 
 .nav
   display flex
+  // margin-right 2em
   &__link
+    margin-right 1.5em
     position relative
     transition $transition
-    &:after
-      background-color $primary
-      bottom 1px
-      content ''
-      height 1px
-      left 0
-      position absolute
-      transition $transition
-      width 0
-    &:hover
-      &:after
-        width 100%
-    &:not(:last-child)
-      margin-right 1em
     a
-      color $main
+      color #fff
       display flex
-      font-size 1.4rem
+      font-size 1.6rem
+      font-weight 500
       padding 2.4rem 0
-      position relative
+      linkHover($primary)
+      &:hover
+        color #fff
+        &:before
+          background-color $primary
+      // position relative
 
 
 .burger

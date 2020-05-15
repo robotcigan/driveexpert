@@ -3,21 +3,34 @@ extends layout.pug
 block content
   
   section.hero.section
-    .hero__img
-      +webp('hero', 'jpg')
+    .hero__img-container
+      .hero__img.wow
+        +webp('hero', 'jpg')
     .hero__align
-      .wrapper
-        .hero__container
+      .hero__container.wrapper.wow
+        .hero__text-width
           .label Приложение DrivExpert 
-          h1.hero__title Инструктор в вашем смартфоне
+          h1.hero__title.blast-text.wow Инструктор в вашем смартфоне
           p.hero__subtitle Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения
+          .downloads
+            a(href="").download
+              img(src="./img/download-google.svg", alt="")
+            a(href="").download
+              img(src="./img/download-apple.svg", alt="")
+          .hero__phones.wow
+            .hero__phone
+              +webp('phone-1', 'png')
+            .hero__phone
+              +webp('phone-2', 'png')
 
  
   .wrapper
     section.section
+      .heading.heading_small
+        h2 Преимущества
       .container.prems
         - for (var i = 1; i < 7; i++)
-          .col.col--sm-6
+          .col.col--sm-6.wow.fade-up
             .prem
               .prem__img
                 +webp('prem-1', 'png')
@@ -27,30 +40,120 @@ block content
                 img(src="./img/prem-icon-" + i + ".svg", alt="")
 
 
+  .effect
+    .effect__img
+      img(src="./img/effect.jpg", alt="")
+      .effect__red
+    img(src="./img/effect-logo.svg", alt="").effect__logo
+
+
   .wrapper
-    section.section
+    section.section#prems
       .heading
         h2 Версии Drive Expert
+      .apps
+        .apps__item.apps__item_left
+          .apps__line Время прохождения круга с секторами и оптимальный круг
+          .apps__line Библиотека треков >2000 готовых гоночных трасс по всему миру
+          .apps__line Пользовательские пользовательские схемы и двухточечные дорожки
+          .apps__line Советы и консультации в реальном времени во время прохождения трассы
+          .apps__line Прогнозируемый временной круг и дельта-график времени
+          .apps__line Аппаратный ускоренный экспорт видео с настраиваемым наложением данных
+          .apps__line Запись с нескольких камер и экспорт видео в картинке
+          .apps__line Запись видео с использованием внутренней камеры
+          .apps__line Дистанционное управление экшн-камерами GoPro® HERO
+
+        - for (a = 0; a < 3; a++)
+          .apps__item
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-check.svg")
+
+        //- br
+        //- .apps__hidden
+        //- .apps__more more
 
 
 
-    section.section
+  section.tracks.section
+    .track
+      .track__img
+        +webp('nurburgring', 'jpg')
+      .track__align
+        .wrapper.track__container
+          .track__top Доступные трассы
+          .track__center
+            .track__title.blast-text.wow Nürburgring
+            .track__subtitle Нюрбургринг
+          .track__bottom 53520 Nürburg, <br>Германия
+    //- .track
+    //-   .track__img
+    //-     +webp('nurburgring', 'jpg')
+    //-   .track__align
+    //-     .wrapper.track__container
+    //-       .track__top Доступные трассы
+    //-       .track__center
+    //-         .track__title Nürburgring
+    //-         .track__subtitle Нюрбургринг
+    //-       .track__bottom 53520 Nürburg, <br>Германия
+
+  .wrapper
+    section.section#records
       .heading
         h2 Приложение выставляет оценку после завершения круга
         p Учитывается не только скорость прохождения, но и безопасность и стиль вождения. Лучшие результаты попадают в таблицу рекордов и отображаются на сайте. А вы сможете обогнать Дениса?
-        
+      .records.wow
+        - for (var i = 0; i < 10; i++)
+          .record
+            .record__left
+              .record__number= i + 1
+              .record__name Денис Малеваный
+            .record__center
+              .record__track Nürburgring
+            .record__right
+              .record__date 02.05.2020
+              .record__time 6:44.97
 
 
     section.section
       .heading
         h2 Приложения от гонщиков для гонщиков
         p Мы знаем толк в гонках. Для нас было целью создать приложение которое было бы полезно фанатам гонок. Для таких же как мы.
+      
+      .slider.slider-persons
+        .swiper-container.wow
+          .swiper-wrapper
+            - for (var b = 0; b < 4; b++)
+              .swiper-slide
+                .person
+                  .person__img
+                    img(src="./img/denis.png", alt="")
+                  .person__name Денис Малеваный
+                  .person__status Руководство проекта и техническая реализация
+          .swiper-button-prev
+            img(src="./img/arrow-left.svg", alt="")
+          .swiper-button-next
+            img(src="./img/arrow-right.svg", alt="")
+          .swiper-pagination
 
 
     section.section
       .heading.heading_small
         h2 Новости
-      .news
+      .news.wow
+        a(href="#news").new.modal-open
+          .new__left
+            .new__title Обновлённая версия приложения 1.0.1 для Android
+            time.date.new__date 02.05.2020
+          .new__right
+            .new__os
+              img(src="./img/android.svg", alt="")
+        a(href="").new
+          .new__left
+            .new__title Обновлённая версия приложения 1.0.1 для Android
+            time.date.new__date 02.05.2020
+          .new__right
+            .new__os
+              img(src="./img/apple.svg", alt="")
         a(href="").new
           .new__left
             .new__title Обновлённая версия приложения 1.0.1 для Android
@@ -60,3 +163,22 @@ block content
               img(src="./img/android.svg", alt="")
 
 
+  .modal(id="news")
+    .modal__body
+      .modal__left
+        .modal__title Обновление приложения v6.3.4 для Android
+        .date 02.05.2020
+        hr
+        strong Change log for RaceChrono v6.3.4 for Android (14.4.2020):
+        ul
+          li Fixed: Location permission was not properly requested when adding a Bluetooth device
+          li Fixed: Broken GoPro discovery
+          li Urgent fix: Analysis and devices packs were not properly issued with Pro upgrade (bug introduced in v6.3.1)
+        +webp('screenshot', 'jpg')
+        strong Change log for RaceChrono v6.3.3 for Android (10.4.2020):
+        p • List of paired devices will be displayed when adding a new Bluetooth device. Searching devices in range is now an option. • Added new settings “Auto-detect my tracks only” and “Auto-detect again if finished”. The latter one should be useful for rally events with multiple different special stages. • Added new setting “Split video files”. If disabled the video will be recorded to one large file. • Improved: DIY CAN-Bus API now allows payload length up-to 16 bytes • Improved: Expert setting “GPS week rollover compensation” now also affects the built-in GPS • Fixed: A notification is now displayed, if location is disabled and it is needed for searching or connecting devices • Fixed: Channel postfix field was not displayed in CAN-Bus channel editor 
+
+
+
+
+      //- .modal__right

@@ -1,0 +1,38 @@
+.records
+  // border-top $border
+  &.animated
+    .record
+      opacity 1
+      transform none
+
+
+.record
+  // border-top $border
+  display flex
+  font-weight 500
+  justify-content space-between
+  opacity 0
+  padding 1em 0
+  transition $transition
+  transform translateY(1rem)
+  for num in 2..10
+    &:nth-child({num})
+      transition-delay ((num - 1) / 14) s
+  &:not(:last-child)
+    border-bottom $border
+  &__left
+    display flex
+  &__center
+    display flex
+  &__right
+    display flex
+  &__number
+    margin-right .5em
+  &__date
+    color $gray
+    margin-right 3em
+    text-align right
+  &__time
+    color $green
+    font-weight 700
+    text-align right

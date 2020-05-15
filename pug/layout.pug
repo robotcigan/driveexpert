@@ -9,7 +9,7 @@ doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
-    title Клиника Глазуновой
+    title DrivExpert
     meta(name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="format-detection" content="telephone=no")
@@ -69,83 +69,40 @@ html(lang="ru")
         .header__container.wrapper
           .header__left
             a(href="./pages.html").logo
-              img(src="./img/logo.svg", alt="").svg
-            .nav
-              .nav__link: a(href="./about.html") О клинике
-              .dropdown
-                .dropdown__container
-                  .dropdown__section
-                    .dropdown__link.dropdown__link_big: a(href="") О клинике
-                    .dropdown__list
-                      .dropdown__link: a(href="") Рекламные ролики
-                      .dropdown__link: a(href="") Корпоративные фильмы
-                      .dropdown__link: a(href="") Клипы
-                      .dropdown__link: a(href="") Телепрограммы
-                  .dropdown__section
-                    .dropdown__list
-                      .dropdown__link: a(href="") Бактерии
-                      .dropdown__link: a(href="") Дрожжи
-                      .dropdown__link: a(href="") Инактивированные дрожжи
-                      .dropdown__link: a(href="") Подкормка
-                      .dropdown__link: a(href="") Ферменты
-                  .dropdown__section
-                    .dropdown__link.dropdown__link_big: a(href="") Другое
-                    .dropdown__list
-                      .dropdown__link: a(href="") Бактерии
-                      .dropdown__link: a(href="") Дрожжи
-                      .dropdown__link: a(href="") Инактивированные дрожжи
-                      .dropdown__link: a(href="") Подкормка
-                      .dropdown__link: a(href="") Ферменты
-
-              .nav__link: a(href="./specialists.html") Специалисты
-              .nav__link: a(href="./services.html") Услуги
-              .nav__link: a(href="./price.html") Цены
-              .nav__link: a(href="./contacts.html") Контакты
+              img(src="./img/logo.svg", alt="")
           .header__right
-            .header__phone-container
-              a(href="tel:79882459001").header__phone +7 988 245-90-01
-            .header-button Оплатить онлайн
-            .header-button Записаться
+            .nav
+              .nav__link.nav__link_anchor: a(href="#prems") Преимущества
+              .nav__link: a(href="#support") Поддержка
+              .nav__link.nav__link_anchor: a(href="#records") Рекорды
+            .btn
+              .btn__text Купить
             .burger
 
       block content
-      
 
 
       footer.footer
         .wrapper
-          .container
-            .col.col--xxl-3.col--lg-3
+          .container.footer__top
+            .col.col--lg-4
               .logo
                 img(src="./img/logo.svg", alt="").svg
-            .col.col--xxl-2.col--lg-2.col--xs-6
-              .footer__link: a(href="") Услуги
-              .footer__link: a(href="") Портфолио
-              .footer__link: a(href="") Клиенты
-              .footer__link: a(href="") Блог
-              .footer__link: a(href="") Фотоальбом
-              .footer__link: a(href="") О нас
-            .col.col--xxl-2.col--lg-2.col--xs-6
-              .footer__link: a(href="") Отзывы
-              .footer__link: a(href="") Вакансии
-              .footer__link: a(href="") Контакты
-              .footer__link: a(href="") Анкета для кастинга
-              .footer__link: a(href="") Бриф на разработку
-              .footer__link: a(href="") Политика конфиденциальности
-            .col.col--xxl-2.col--lg-1.dn-lg
-            .col.col--xxl-3.col--lg-4
-              a(href="").footer__phone +7 988 245-90-01
-              a(href="").footer__mail zakaz@mediaheads.ru
-              .socials.socials_white
-                a(href="").social.social_insta
-                  img(src="./img/insta.svg", alt="")
-                a(href="").social.social_vk
-                  img(src="./img/vk.svg", alt="")
-                a(href="").social.social_facebook
-                  img(src="./img/facebook.svg", alt="")
+            .col.col--lg-4.col--xs-6
+              .footer__links
+                .footer__link: a(href="") О приложении
+                .footer__link: a(href="") Поддержка
+                .footer__link: a(href="") Рекорды
+            .col.col--lg-4
+              .footer__right
+                .downloads
+                  a(href="").download
+                    img(src="./img/download-google.svg", alt="")
+                  //- a(href="").download
+                  //-   img(src="./img/download-apple.svg", alt="")
           .footer__bottom.animation-up.wow
-            .copyright 2020, © Компания «Media Heads»
-            p.disclamer Дополнительные материалы взяты из открытых источников
+            .copyright © DriveExpert, 2020
+            .disclamer Дополнительные материалы взяты из открытых источников
 
 
 
@@ -158,6 +115,7 @@ html(lang="ru")
     script(src="./js/animation.gsap.min.js")
     script(src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js")
     script(src="./js/smoothscroll.js")
+    script(src="./js/jquery.blast.min.js")
     //- script(src="./js/smoothscroll-js.js")
     //- script(src="./js/anotherscroll.js")
     script(src="./js/swiper.min.js")

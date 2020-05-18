@@ -42,13 +42,14 @@ block content
 
   .effect
     .effect__img
-      img(src="./img/effect.jpg", alt="")
+      //- img(src="./img/effect.jpg", alt="")
+      img(src="./img/effect-2.jpg", alt="")
       .effect__red
     img(src="./img/effect-logo.svg", alt="").effect__logo
 
 
   .wrapper
-    section.section#buy
+    section.section.apps-section#buy
       .heading
         h2 Версии Drive Expert
       .tabs
@@ -56,6 +57,7 @@ block content
           .tabs__links
             .tabs__link Android
             .tabs__link iOs
+
       .apps
         .apps__header
           .apps__item.apps__item_left Функционал
@@ -109,10 +111,10 @@ block content
           .apps__item
             - for (var i = 0; i < 9; i++)
               .apps__line: img(src="./img/apps-check.svg")
+
         //- br
         //- .apps__hidden
         //- .apps__more more
-
 
 
   section.tracks.section
@@ -151,7 +153,20 @@ block content
               .record__track Nürburgring
             .record__right
               .record__date 02.05.2020
-              .record__time(data-number="6:44.97") 6:44.97
+              .record__time(data-number="6:" + i * 2 + ":97") 6:44:97
+      
+      .more-container
+        //- a(href="#records").more
+        //-   .more__icon
+        //-     img(src="./img/more.svg", alt="").svg
+        //-   .more__text Все результаты
+        a(href="#records").more
+          .more__icon
+            //- img(src="./img/more.svg", alt="").svg
+            svg( width="40" height="40" fill="none")
+              circle(opacity="0.3" cx="20" cy="20" r="19.5" stroke="#E61830")
+              circle#more-circle(cx="20" cy="20" r="19.5" stroke="#E61830")
+          .more__text Все результаты
 
 
     section.section

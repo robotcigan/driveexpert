@@ -75,9 +75,44 @@ hr,
     line-height 1.2
 
 
+.more-container
+  display flex
+  justify-content center
 
-
-
+.more
+  align-items center
+  display flex
+  flex-direction column
+  &__icon
+    margin-bottom 1rem
+    position relative
+    &:before
+      background-color $primary
+      content ''
+      center()
+      height 2px
+      width 12px
+    &:after
+      background-color $primary
+      content ''
+      center()
+      height 12px
+      width 2px
+  &__text
+    color $primary
+    font-size 1.2rem
+    font-weight 800
+    letter-spacing .5px
+    text-transform uppercase
+  #more-circle
+    stroke-dasharray 250
+    stroke-dashoffset 250
+    transition $transition3
+  &:hover
+    #more-circle
+      stroke-dashoffset 0
+    #more-cross
+      transform rotate(180deg)
 
 
 

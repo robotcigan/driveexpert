@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle opacity="0.3" cx="20" cy="20" r="19.5" stroke="#E61830"/>
+<circle id="more-circle" opacity="1" cx="20" cy="20" r="19.5" stroke="#E61830"/>
+<g id="more-cross" cx="20" cy="20">
+  <path d="M19 14H21V26H19V14Z" fill="#E61830"/>
+  <path d="M14 19H26V21H14V19Z" fill="#E61830"/>
+</g>
+</svg>

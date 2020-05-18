@@ -31,6 +31,16 @@ $(document).ready(function () {
   }
   setTimeout(blastTextAddVisibility, 300);
 
+  // records numbers
+  // $('.record__time').each(function() {
+  //   let recordNumber = $(this).data('number');
+  //   $(this).find('span').text('');
+  //   $(this).find('span').animateNumber(
+  //     {number: recordNumber},
+  //     {duration: 2000});
+  // });
+
+
   // hero img parallax
   var heroImgTween = new TimelineMax().to('.hero__img', 1, {
     scale: 1.1
@@ -45,25 +55,35 @@ $(document).ready(function () {
   .addTo(controller);
 
   // effect
-  var effectTween = new TimelineMax().to('.effect__img', 1, {
-    // scale: .1
-    'border-radius': '12px',
-    height: 80,
-    width: 80
-    // width:520.30, height:119
-  }, 0).to('.effect__red', .6, {
-    opacity: 1
-  }, 0).to('.effect__logo', 1, {
-    // scale: .1
-    width: 48
-  }, 0);
+  function ifNotMobile() {
 
-  var effectScroll = new ScrollMagic.Scene({
-    triggerElement: '.effect',
-    triggerHook: .6,
-    duration: '50%'
-  }).setTween(effectTween)
-  // .setPin('.effect')
-  // .addIndicators()
-  .addTo(controller);
+    var effectTween = new TimelineMax().to('.effect__img', 1, {
+      'border-radius': '12px',
+      height: 80,
+      width: 80
+    }, 0).to('.effect__red', .6, {
+      opacity: 1
+    }, 0).to('.effect__logo', 1, {
+      width: 48
+    }, 0);
+
+    var effectScroll = void 0;
+    if ($(window).width() > 1200) {
+      effectScroll = new ScrollMagic.Scene({
+        triggerElement: '.effect',
+        triggerHook: .6,
+        duration: '50%'
+      }).setTween(effectTween)
+      // .addIndicators()
+      .addTo(controller);
+    } else {
+      controller.removeScene(effectScroll);
+    }
+  }
+
+  $(window).on('resize', function () {
+    ifNotMobile();
+  });
+
+  ifNotMobile();
 });

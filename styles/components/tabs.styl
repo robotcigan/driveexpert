@@ -1,15 +1,17 @@
 .tabs
   &__header
-    border-bottom $border
+    // border-bottom $border
     display flex
+    justify-content center
     margin-bottom 4rem
     position relative
+  &__links
+    border-bottom $border
   &__link
     align-items center
     cursor pointer
     display flex
     justify-content center
-    margin-right 2em
     padding 1em 0
     padding-top 0
     position relative
@@ -21,6 +23,8 @@
       color $primary
       &:before
         width 100%
+    &:not(:last-child)
+      margin-right 2em
 
   &__content
     display none

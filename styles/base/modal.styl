@@ -4,61 +4,96 @@
   box-shadow 0 1rem 2rem rgba($main, .1)
   display none
   margin 0 auto
-  max-width 140rem
+  max-width 122rem
+  overflow initial
   padding 0
   position relative
   width 90%
   &__body
     display flex
-    padding 8rem 12rem
+    justify-content space-between
   &__left
-    // flex-shrink 0
     margin-right 8rem
+    padding 8rem
     img
       margin-bottom 2em
+    .modal
+      &__icon
+        margin-bottom 1rem
+        margin-left -6px
   &__title
     font-size 3.2rem
     font-weight 700
     margin-bottom .5em
-  .socials
-    justify-content center
+  &__right
+    &-img
+      height 100%
+      img
+        height 100%
+        object-fit cover
+        width 100%
 
 
 .fancybox-can-swipe .fancybox-content, .fancybox-can-pan .fancybox-content
   cursor initial
+
+.fancybox-button.fancybox-close-small
+  // margin-right -1.6rem
+  margin-right -3.2rem
+  margin-top -4.4rem
 
 .fancybox-close-small
   color #fff !important
 
 
 @media(max-width 1200px)
+  .fancybox-button.fancybox-close-small
+    margin-right -1.6rem
   .modal
     width 94%
-    &__body
-      padding 2.4rem 2.4rem
     &__left
-      margin-right 4rem
-      width 50%
-    &__right
-      width 50%
+      padding 4rem
 
+
+@media(max-width 1000px)
+  .modal
+    width 96%
+    &__left
+      padding 2.4rem
+      margin-right 0
 
 
 @media(max-width 767px)
   .modal
     margin-bottom 8rem
-    top 3.2rem
-    &__body
-      display block
-    &__left
-      width 100%
-    &__right
-      width 100%
-    &__title
-      font-size 2.4rem
+    top 4rem
+    &_person
+      .modal
+        &__body
+          flex-direction column
+        &__right
+          order -1
+          &-img
+            height 32rem
 
 
-@media(max-width 370px)
-  .modal
-    &__header
-      font-size 2rem
+
+// @media(max-width 767px)
+//   .modal
+//     margin-bottom 8rem
+//     top 3.2rem
+//     &__body
+//       display block
+//     &__left
+//       width 100%
+//     &__right
+//       width 100%
+//     &__title
+//       font-size 2.4rem
+
+
+
+
+
+
+

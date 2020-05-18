@@ -22,12 +22,13 @@
     border-bottom $border
   &__left
     display flex
-  &__center
-    display flex
+  &__name
+    min-width 32rem
   &__right
     display flex
   &__number
     margin-right .5em
+    width 1rem
   &__date
     color $gray
     margin-right 3em
@@ -36,3 +37,43 @@
     color $green
     font-weight 700
     text-align right
+
+
+
+
+@media(max-width 767px)
+  .records
+    .record
+      font-size 1.4rem
+      &__left
+        display block
+      &__number
+        display none
+      &__name
+        flex-shrink 0
+        min-width initial
+        margin-bottom .25em
+      &__track
+        color $gray
+      &__right
+        flex-direction column
+      &__date
+        font-size 1.2rem
+        margin-right 0
+      &__time
+        order -1
+        margin-bottom .25em
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -32,35 +32,20 @@ html(lang="ru")
     .mobile-menu
       .mobile-menu__container
         .mobile-menu__nav
-          .mobile-menu-accordion
-            .mobile-menu__link.mobile-menu__link_big Услуги
-            .mobile-menu__link-section
-              .mobile-menu__link-container
-                .mobile-menu__link: a(href="") Рекламные ролики
-                .mobile-menu__link: a(href="") Корпоративные фильмы
-                .mobile-menu__link: a(href="") Клипы
-                .mobile-menu__link: a(href="") Телепрограммы
-                .mobile-menu__link: a(href="") Анимационные ролики
-              .mobile-menu__link-container
-                .mobile-menu__link: a(href="") Рекламные ролики
-                .mobile-menu__link: a(href="") Корпоративные фильмы
-                .mobile-menu__link: a(href="") Клипы
-                .mobile-menu__link: a(href="") Телепрограммы
-                .mobile-menu__link: a(href="") Анимационные ролики
+          .mobile-menu__link.mobile-menu__link_big: a(href="") О приложени
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Поддержка
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Рекорды
+          .mobile-menu__link: a(href="") О нас
+          .mobile-menu__link: a(href="") Новости
+          .mobile-menu__link: a(href="") Контакты
 
+        hr
 
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Портфолио
-          .mobile-menu__link.mobile-menu__link_big: a(href="") О нас
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Клиенты
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Блог
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Фотоальбом
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Вакансии
-          .mobile-menu__link.mobile-menu__link_big: a(href="") Отзывы
-        .mobile-menu__phone-container
-          a(href="tel:79882459001").mobile-menu__phone +7 988 245-90-01
-        .btn
-          .btn__text Рассчитать стоимость
+        .downloads.downloads_black
+          a(href="").download
+            img(src="./img/download-google.svg", alt="")
+          a(href="").download
+            img(src="./img/download-apple.svg", alt="")
 
 
 
@@ -72,10 +57,10 @@ html(lang="ru")
               img(src="./img/logo.svg", alt="")
           .header__right
             .nav
-              .nav__link.nav__link_anchor: a(href="#prems") Преимущества
-              .nav__link: a(href="#support") Поддержка
-              .nav__link.nav__link_anchor: a(href="#records") Рекорды
-            .btn
+              .nav__link.nav__link_anchor: a(href="#prems").anchor Преимущества
+              .nav__link: a(href="#support").modal-open Поддержка
+              .nav__link.nav__link_anchor: a(href="#records").anchor Рекорды
+            a(href="#buy").btn.anchor
               .btn__text Купить
             .burger
 
@@ -88,7 +73,7 @@ html(lang="ru")
             .col.col--lg-4
               .logo
                 img(src="./img/logo.svg", alt="").svg
-            .col.col--lg-4.col--xs-6
+            .col.col--lg-4
               .footer__links
                 .footer__link: a(href="") О приложении
                 .footer__link: a(href="") Поддержка
@@ -102,7 +87,7 @@ html(lang="ru")
                   //-   img(src="./img/download-apple.svg", alt="")
           .footer__bottom.animation-up.wow
             .copyright © DriveExpert, 2020
-            .disclamer Дополнительные материалы взяты из открытых источников
+            //- .disclamer Дополнительные материалы взяты из открытых источников
 
 
 
@@ -122,5 +107,6 @@ html(lang="ru")
     script(src="./js/wow.min.js")
     script(src="./js/jquery.inputmask.bundle.min.js")
     script(src="./js/jquery.nice-select.min.js")
+    script(src="./js/jquery.animateNumber.min.js")
     script(src="./js/main.js")
     script(src="./js/animations.js")

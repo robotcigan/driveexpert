@@ -1,29 +1,80 @@
 .apps
-  display flex
-  justify-content space-between
-  // &__left
-  //   width 32rem
-  // &__right
-  //   display grid
-  //   grid-template-columns repeat(3, 1fr)
-  //   justify-content space-between
-  //   width 100%
+  &__body
+    display flex
+    justify-content space-between
+  &__header
+    border-bottom 1px solid $main
+    display flex
+    justify-content space-between
+    padding-bottom 1.6rem
+    .apps
+      &__item
+        &_left
+          align-items flex-end
+          display flex
   &__item
     width 100%
     &_left
       flex-shrink 0
       width 32rem
+      .apps
+        &__line
+          justify-content flex-start
+    &_highlight
+      background-color $light-gray
+      position relative
+      &:before
+        content ''
+        background-color $light-gray
+        height calc(100% + 4rem)
+        position absolute
+        left 0
+        top -2rem
+        width 100%
+        z-index -1
   &__line
     align-items center
-    border-bottom $border
     display flex
     justify-content center
     min-height 6.4rem
     // padding-top 1em
+    &:not(:last-child)
+      border-bottom $border
   &__sign
     border-bottom $border
     display flex
     justify-content center
     margin-bottom 1rem
     padding-bottom 1em
-    // text-align center
+  &__product
+    align-items center
+    display flex
+    flex-direction column
+  &__name
+    margin-bottom .5em
+  &__price
+    display flex
+    font-size 4.8rem
+    margin-bottom .1em
+    span
+      font-size 2rem
+      transform translateY(.25em)
+  .btn
+    background-color #fff
+    border 1px solid rgba($primary, .3)
+    color $primary
+    &:before
+      background-color rgba($primary, .1)
+
+
+@media(max-width 767px)
+  .apps
+    &__item
+      &_left
+        max-width 50%
+        width initial
+
+
+
+
+

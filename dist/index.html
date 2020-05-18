@@ -14,38 +14,15 @@
     <div class="mobile-menu">
       <div class="mobile-menu__container">
         <div class="mobile-menu__nav">
-          <div class="mobile-menu-accordion">
-            <div class="mobile-menu__link mobile-menu__link_big">Услуги</div>
-            <div class="mobile-menu__link-section">
-              <div class="mobile-menu__link-container">
-                <div class="mobile-menu__link"><a href="">Рекламные ролики</a></div>
-                <div class="mobile-menu__link"><a href="">Корпоративные фильмы</a></div>
-                <div class="mobile-menu__link"><a href="">Клипы</a></div>
-                <div class="mobile-menu__link"><a href="">Телепрограммы</a></div>
-                <div class="mobile-menu__link"><a href="">Анимационные ролики</a></div>
-              </div>
-              <div class="mobile-menu__link-container">
-                <div class="mobile-menu__link"><a href="">Рекламные ролики</a></div>
-                <div class="mobile-menu__link"><a href="">Корпоративные фильмы</a></div>
-                <div class="mobile-menu__link"><a href="">Клипы</a></div>
-                <div class="mobile-menu__link"><a href="">Телепрограммы</a></div>
-                <div class="mobile-menu__link"><a href="">Анимационные ролики</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Портфолио</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">О нас</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Контакты</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Клиенты</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Блог</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Фотоальбом</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Вакансии</a></div>
-          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Отзывы</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">О приложени</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Поддержка</a></div>
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Рекорды</a></div>
+          <div class="mobile-menu__link"><a href="">О нас</a></div>
+          <div class="mobile-menu__link"><a href="">Новости</a></div>
+          <div class="mobile-menu__link"><a href="">Контакты</a></div>
         </div>
-        <div class="mobile-menu__phone-container"><a class="mobile-menu__phone" href="tel:79882459001">+7 988 245-90-01</a></div>
-        <div class="btn">
-          <div class="btn__text">Рассчитать стоимость</div>
-        </div>
+        <hr>
+        <div class="downloads downloads_black"><a class="download" href=""><img src="./img/download-google.svg" alt=""></a><a class="download" href=""><img src="./img/download-apple.svg" alt=""></a></div>
       </div>
     </div>
     <main class="page">
@@ -54,13 +31,11 @@
           <div class="header__left"><a class="logo" href="./pages.html"><img src="./img/logo.svg" alt=""></a></div>
           <div class="header__right">
             <div class="nav">
-              <div class="nav__link nav__link_anchor"><a href="#prems">Преимущества</a></div>
-              <div class="nav__link"><a href="#support">Поддержка</a></div>
-              <div class="nav__link nav__link_anchor"><a href="#records">Рекорды</a></div>
-            </div>
-            <div class="btn">
-              <div class="btn__text">Купить</div>
-            </div>
+              <div class="nav__link nav__link_anchor"><a class="anchor" href="#prems">Преимущества</a></div>
+              <div class="nav__link"><a class="modal-open" href="#support">Поддержка</a></div>
+              <div class="nav__link nav__link_anchor"><a class="anchor" href="#records">Рекорды</a></div>
+            </div><a class="btn anchor" href="#buy">
+              <div class="btn__text">Купить</div></a>
             <div class="burger"></div>
           </div>
         </div>
@@ -79,7 +54,7 @@
               <div class="label">Приложение DrivExpert </div>
               <h1 class="hero__title blast-text wow">Инструктор в вашем смартфоне</h1>
               <p class="hero__subtitle">Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-              <div class="downloads"><a class="download" href=""><img src="./img/download-google.svg" alt=""></a><a class="download" href=""><img src="./img/download-apple.svg" alt=""></a></div>
+              <div class="downloads"><a class="download" href=""><img src="./img/download-google.svg" alt=""></a></div>
               <div class="hero__phones wow">
                 <div class="hero__phone">
                   <picture>
@@ -97,13 +72,12 @@
         </div>
       </section>
       <div class="wrapper">
-        <section class="section">
+        <section class="section" id="prems">
           <div class="heading heading_small">
             <h2>Преимущества</h2>
           </div>
           <div class="container prems">
-            <div class="col col--sm-6 wow fade-up">
-              <div class="prem">
+            <div class="col col--sm-6 wow fade-up"><a class="prem modal-open" href="#prem">
                 <div class="prem__img">
                   <picture>
                     <source srcset="./img/webp/prem-1.webp" type="image/webp" alt=""/><img src="./img/prem-1.png" alt=""/>
@@ -111,11 +85,8 @@
                 </div>
                 <h3 class="prem__title">Обучающие материалы по основам пилотирования</h3>
                 <p>Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-                <div class="prem__icon"><img src="./img/prem-icon-1.svg" alt=""></div>
-              </div>
-            </div>
-            <div class="col col--sm-6 wow fade-up">
-              <div class="prem">
+                <div class="prem__icon"><img src="./img/prem-icon-1.svg" alt=""></div></a></div>
+            <div class="col col--sm-6 wow fade-up"><a class="prem modal-open" href="#prem">
                 <div class="prem__img">
                   <picture>
                     <source srcset="./img/webp/prem-1.webp" type="image/webp" alt=""/><img src="./img/prem-1.png" alt=""/>
@@ -123,11 +94,8 @@
                 </div>
                 <h3 class="prem__title">Обучающие материалы по основам пилотирования</h3>
                 <p>Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-                <div class="prem__icon"><img src="./img/prem-icon-2.svg" alt=""></div>
-              </div>
-            </div>
-            <div class="col col--sm-6 wow fade-up">
-              <div class="prem">
+                <div class="prem__icon"><img src="./img/prem-icon-2.svg" alt=""></div></a></div>
+            <div class="col col--sm-6 wow fade-up"><a class="prem modal-open" href="#prem">
                 <div class="prem__img">
                   <picture>
                     <source srcset="./img/webp/prem-1.webp" type="image/webp" alt=""/><img src="./img/prem-1.png" alt=""/>
@@ -135,11 +103,8 @@
                 </div>
                 <h3 class="prem__title">Обучающие материалы по основам пилотирования</h3>
                 <p>Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-                <div class="prem__icon"><img src="./img/prem-icon-3.svg" alt=""></div>
-              </div>
-            </div>
-            <div class="col col--sm-6 wow fade-up">
-              <div class="prem">
+                <div class="prem__icon"><img src="./img/prem-icon-3.svg" alt=""></div></a></div>
+            <div class="col col--sm-6 wow fade-up"><a class="prem modal-open" href="#prem">
                 <div class="prem__img">
                   <picture>
                     <source srcset="./img/webp/prem-1.webp" type="image/webp" alt=""/><img src="./img/prem-1.png" alt=""/>
@@ -147,11 +112,8 @@
                 </div>
                 <h3 class="prem__title">Обучающие материалы по основам пилотирования</h3>
                 <p>Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-                <div class="prem__icon"><img src="./img/prem-icon-4.svg" alt=""></div>
-              </div>
-            </div>
-            <div class="col col--sm-6 wow fade-up">
-              <div class="prem">
+                <div class="prem__icon"><img src="./img/prem-icon-4.svg" alt=""></div></a></div>
+            <div class="col col--sm-6 wow fade-up"><a class="prem modal-open" href="#prem">
                 <div class="prem__img">
                   <picture>
                     <source srcset="./img/webp/prem-1.webp" type="image/webp" alt=""/><img src="./img/prem-1.png" alt=""/>
@@ -159,11 +121,8 @@
                 </div>
                 <h3 class="prem__title">Обучающие материалы по основам пилотирования</h3>
                 <p>Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-                <div class="prem__icon"><img src="./img/prem-icon-5.svg" alt=""></div>
-              </div>
-            </div>
-            <div class="col col--sm-6 wow fade-up">
-              <div class="prem">
+                <div class="prem__icon"><img src="./img/prem-icon-5.svg" alt=""></div></a></div>
+            <div class="col col--sm-6 wow fade-up"><a class="prem modal-open" href="#prem">
                 <div class="prem__img">
                   <picture>
                     <source srcset="./img/webp/prem-1.webp" type="image/webp" alt=""/><img src="./img/prem-1.png" alt=""/>
@@ -171,9 +130,7 @@
                 </div>
                 <h3 class="prem__title">Обучающие материалы по основам пилотирования</h3>
                 <p>Обучающие материалы по основам спортивного пилотирования, гиды по гоночным трассам, подсказки во время заезда, анализ ошибок и оценка уровня вождения</p>
-                <div class="prem__icon"><img src="./img/prem-icon-6.svg" alt=""></div>
-              </div>
-            </div>
+                <div class="prem__icon"><img src="./img/prem-icon-6.svg" alt=""></div></a></div>
           </div>
         </section>
       </div>
@@ -183,54 +140,100 @@
         </div><img class="effect__logo" src="./img/effect-logo.svg" alt="">
       </div>
       <div class="wrapper">
-        <section class="section" id="prems">
+        <section class="section" id="buy">
           <div class="heading">
             <h2>Версии Drive Expert</h2>
           </div>
+          <div class="tabs">
+            <div class="tabs__header">
+              <div class="tabs__links">
+                <div class="tabs__link">Android</div>
+                <div class="tabs__link">iOs</div>
+              </div>
+            </div>
+          </div>
           <div class="apps">
-            <div class="apps__item apps__item_left">
-              <div class="apps__line">Время прохождения круга с секторами и оптимальный круг</div>
-              <div class="apps__line">Библиотека треков >2000 готовых гоночных трасс по всему миру</div>
-              <div class="apps__line">Пользовательские пользовательские схемы и двухточечные дорожки</div>
-              <div class="apps__line">Советы и консультации в реальном времени во время прохождения трассы</div>
-              <div class="apps__line">Прогнозируемый временной круг и дельта-график времени</div>
-              <div class="apps__line">Аппаратный ускоренный экспорт видео с настраиваемым наложением данных</div>
-              <div class="apps__line">Запись с нескольких камер и экспорт видео в картинке</div>
-              <div class="apps__line">Запись видео с использованием внутренней камеры</div>
-              <div class="apps__line">Дистанционное управление экшн-камерами GoPro® HERO</div>
+            <div class="apps__header">
+              <div class="apps__item apps__item_left">Функционал</div>
+              <div class="apps__item">
+                <div class="apps__product">
+                  <div class="apps__name">Lap Timer</div>
+                  <div class="apps__price"><span>$</span>5</div>
+                  <div class="apps__button">
+                    <div class="btn">
+                      <div class="btn__text">Купить</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="apps__item apps__item_highlight">
+                <div class="apps__product">
+                  <div class="apps__name">Lite</div>
+                  <div class="apps__price"><span>$</span>20</div>
+                  <div class="apps__button">
+                    <div class="btn">
+                      <div class="btn__text">Купить</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="apps__item">
+                <div class="apps__product">
+                  <div class="apps__name">Pro</div>
+                  <div class="apps__price"><span>$</span>200</div>
+                  <div class="apps__button">
+                    <div class="btn">
+                      <div class="btn__text">Купить</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="apps__item">
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-            </div>
-            <div class="apps__item">
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-            </div>
-            <div class="apps__item">
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
-              <div class="apps__line"><img src="./img/apps-check.svg"></div>
+            <div class="apps__body">
+              <div class="apps__item apps__item_left">
+                <div class="apps__line">Время прохождения круга с секторами и оптимальный круг</div>
+                <div class="apps__line">Библиотека треков >2000 готовых гоночных трасс по всему миру</div>
+                <div class="apps__line">Пользовательские пользовательские схемы и двухточечные дорожки</div>
+                <div class="apps__line">Советы и консультации в реальном времени во время прохождения трассы</div>
+                <div class="apps__line">Прогнозируемый временной круг и дельта-график времени</div>
+                <div class="apps__line">Аппаратный ускоренный экспорт видео с настраиваемым наложением данных</div>
+                <div class="apps__line">Запись с нескольких камер и экспорт видео в картинке</div>
+                <div class="apps__line">Запись видео с использованием внутренней камеры</div>
+                <div class="apps__line">Дистанционное управление экшн-камерами GoPro® HERO</div>
+              </div>
+              <div class="apps__item">
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+              </div>
+              <div class="apps__item apps__item_highlight">
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+              </div>
+              <div class="apps__item">
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+                <div class="apps__line"><img src="./img/apps-check.svg"></div>
+              </div>
             </div>
           </div>
         </section>
@@ -265,130 +268,110 @@
               <div class="record__left">
                 <div class="record__number">1</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">2</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">3</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">4</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">5</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">6</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">7</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">8</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">9</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
             <div class="record">
               <div class="record__left">
                 <div class="record__number">10</div>
                 <div class="record__name">Денис Малеваный</div>
-              </div>
-              <div class="record__center">
                 <div class="record__track">Nürburgring</div>
               </div>
               <div class="record__right">
                 <div class="record__date">02.05.2020</div>
-                <div class="record__time">6:44.97</div>
+                <div class="record__time" data-number="6:44.97">6:44.97</div>
               </div>
             </div>
           </div>
@@ -401,34 +384,22 @@
           <div class="slider slider-persons">
             <div class="swiper-container wow">
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="person">
+                <div class="swiper-slide"><a class="person modal-open" href="#person">
                     <div class="person__img"><img src="./img/denis.png" alt=""></div>
                     <div class="person__name">Денис Малеваный</div>
-                    <div class="person__status">Руководство проекта и техническая реализация</div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="person">
+                    <div class="person__status">Руководство проекта и техническая реализация</div></a></div>
+                <div class="swiper-slide"><a class="person modal-open" href="#person">
                     <div class="person__img"><img src="./img/denis.png" alt=""></div>
                     <div class="person__name">Денис Малеваный</div>
-                    <div class="person__status">Руководство проекта и техническая реализация</div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="person">
+                    <div class="person__status">Руководство проекта и техническая реализация</div></a></div>
+                <div class="swiper-slide"><a class="person modal-open" href="#person">
                     <div class="person__img"><img src="./img/denis.png" alt=""></div>
                     <div class="person__name">Денис Малеваный</div>
-                    <div class="person__status">Руководство проекта и техническая реализация</div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="person">
+                    <div class="person__status">Руководство проекта и техническая реализация</div></a></div>
+                <div class="swiper-slide"><a class="person modal-open" href="#person">
                     <div class="person__img"><img src="./img/denis.png" alt=""></div>
                     <div class="person__name">Денис Малеваный</div>
-                    <div class="person__status">Руководство проекта и техническая реализация</div>
-                  </div>
-                </div>
+                    <div class="person__status">Руководство проекта и техническая реализация</div></a></div>
               </div>
               <div class="swiper-button-prev"><img src="./img/arrow-left.svg" alt=""></div>
               <div class="swiper-button-next"><img src="./img/arrow-right.svg" alt=""></div>
@@ -482,13 +453,46 @@
           </div>
         </div>
       </div>
+      <div class="modal" id="prem">
+        <div class="modal__body">
+          <div class="modal__left">
+            <div class="modal__title">Подробнее о преимуществе</div>
+            <div class="date">02.05.2020</div>
+            <hr><strong>Change log for RaceChrono v6.3.4 for Android (14.4.2020):</strong>
+            <picture>
+              <source srcset="./img/webp/screenshot.webp" type="image/webp" alt=""/><img src="./img/screenshot.jpg" alt=""/>
+            </picture><strong>Change log for RaceChrono v6.3.3 for Android (10.4.2020):</strong>
+            <p>• List of paired devices will be displayed when adding a new Bluetooth device. Searching devices in range is now an option. • Added new settings “Auto-detect my tracks only” and “Auto-detect again if finished”. The latter one should be useful for rally events with multiple different special stages. • Added new setting “Split video files”. If disabled the video will be recorded to one large file. • Improved: DIY CAN-Bus API now allows payload length up-to 16 bytes • Improved: Expert setting “GPS week rollover compensation” now also affects the built-in GPS • Fixed: A notification is now displayed, if location is disabled and it is needed for searching or connecting devices • Fixed: Channel postfix field was not displayed in CAN-Bus channel editor </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal modal_person" id="person">
+        <div class="modal__body">
+          <div class="modal__left">
+            <div class="modal__title">Денис Малеваный</div>
+            <div class="date">Руководство проекта и техническая реализация</div>
+            <hr>
+            <p>Инструктор трассы Nurburgring Nordschleife</p>
+            <p>Обладатель международной гоночной лицензии FIA</p><img class="modal__icon" src="./img/trophy.svg" alt="">
+            <p>Призёр этапов чемпионата Германии VLN</p>
+            <p>Победитель гонки Porsche Sport Challenge</p>
+          </div>
+          <div class="modal__right">
+            <div class="modal__right-img">
+              <picture>
+                <source srcset="./img/webp/denis-modal.webp" type="image/webp" alt=""/><img src="./img/denis-modal.jpg" alt=""/>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
       <footer class="footer">
         <div class="wrapper">
           <div class="container footer__top">
             <div class="col col--lg-4">
               <div class="logo"><img class="svg" src="./img/logo.svg" alt=""></div>
             </div>
-            <div class="col col--lg-4 col--xs-6">
+            <div class="col col--lg-4">
               <div class="footer__links">
                 <div class="footer__link"><a href="">О приложении</a></div>
                 <div class="footer__link"><a href="">Поддержка</a></div>
@@ -503,7 +507,6 @@
           </div>
           <div class="footer__bottom animation-up wow">
             <div class="copyright">© DriveExpert, 2020</div>
-            <div class="disclamer">Дополнительные материалы взяты из открытых источников</div>
           </div>
         </div>
       </footer>
@@ -520,6 +523,7 @@
     <script src="./js/wow.min.js"></script>
     <script src="./js/jquery.inputmask.bundle.min.js"></script>
     <script src="./js/jquery.nice-select.min.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
   </body>

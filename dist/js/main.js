@@ -16,7 +16,7 @@ $(document).ready(function () {
   HeaderScroll();
 
   // Переход по якорям
-  $('.nav__link_anchor a').on('click', function (event) {
+  $('.anchor').on('click', function (event) {
     event.preventDefault();
     var id = $(this).attr('href');
     var top = $(id).offset().top;
@@ -56,7 +56,7 @@ $(document).ready(function () {
 
   // Slider/carousel
   var swiper = new Swiper('.slider .swiper-container', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     loop: true,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -65,6 +65,14 @@ $(document).ready(function () {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2
+      },
+      1000: {
+        slidesPerView: 3
+      }
     }
   });
 

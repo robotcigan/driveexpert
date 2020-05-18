@@ -9,7 +9,38 @@
 .prem
   background-color $light-gray
   border-radius $radius
+  display block
   padding 6.4rem
   padding-bottom 4rem
+  transition $transition
   &__img
     margin-bottom 2.4rem
+    transition $transition
+    img
+      max-width 100%
+  &:hover
+    background-color $light-gray - 4%
+    .prem
+      &__img
+        transform translateY(-1rem)
+
+
+@media(max-width 1200px)
+  .prem
+    padding 3.2rem
+
+
+
+@media(max-width 767px)
+  .prems
+    .col
+      &:nth-child(even)
+        .prem
+          transform none
+  .prem
+    background-color transparent
+    border-bottom $border
+    border-radius 0
+    margin-bottom 1.6rem
+    padding 0
+    padding-bottom 3.2rem

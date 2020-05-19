@@ -89,8 +89,6 @@ $(document).ready(function() {
         triggerElement: '.effect',
         triggerHook: .5,
         duration: '100%'
-        // duration: $(window).height() - 500
-        // duration: 500
       })
       .setTween(effectTween)
       .setPin('.effect')
@@ -120,11 +118,11 @@ $(document).ready(function() {
 
   }
 
-  $(window).on('resize', function() {
-    ifNotMobile()
-  });
+  // $(window).on('resize', function() {
+  //   ifNotMobile()
+  // });
 
-  ifNotMobile();
+  // ifNotMobile();
 
 
 });

@@ -1,5 +1,8 @@
 .records
-  // border-top $border
+  &.wow
+    .record
+      opacity 0
+      transform translateY(1rem)
   &.animated
     .record
       opacity 1
@@ -11,10 +14,10 @@
   display flex
   font-weight 500
   justify-content space-between
-  opacity 0
+  // opacity 0
   padding 1em 0
   transition $transition
-  transform translateY(1rem)
+  // transform translateY(1rem)
   for num in 2..10
     &:nth-child({num})
       transition-delay ((num - 1) / 14) s

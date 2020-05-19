@@ -91,12 +91,14 @@ hr,
       content ''
       center()
       height 2px
+      transition transform $bezier .6s .1s
       width 12px
     &:after
       background-color $primary
       content ''
       center()
       height 12px
+      transition transform $bezier .6s .1s
       width 2px
   &__text
     color $primary
@@ -111,9 +113,17 @@ hr,
   &:hover
     #more-circle
       stroke-dashoffset 0
-    #more-cross
-      transform rotate(180deg)
+    .more
+      &__icon
+        &:before,
+        &:after
+          transform rotate(180deg)
+      &__text
+        color $main
+    // #more-cross
+    //   transform rotate(180deg)
 
 
-
+.icon
+  margin-bottom 2.4rem
 

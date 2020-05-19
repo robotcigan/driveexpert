@@ -1,4 +1,5 @@
 .apps
+  padding-bottom 2.4rem
   &__body
     display flex
     justify-content space-between
@@ -47,9 +48,23 @@
     margin-bottom 1rem
     padding-bottom 1em
   &__product
-    align-items center
-    display flex
-    flex-direction column
+    &__top
+      align-items center
+      display flex
+      flex-direction column
+  &__mobile
+    display none
+    &-text
+      width 80%
+    &-value
+      width 20%
+    &-container
+      display flex
+    .apps
+      &__line
+        border-bottom none
+        line-height 1.2
+        min-height 5.6rem
   &__name
     margin-bottom .5em
   &__price
@@ -65,15 +80,61 @@
     color $primary
     &:before
       background-color rgba($primary, .1)
-
+  &__open
+    border-radius 50%
+    border $border
+    position relative
+    size(4rem)
+    transition $transition
+    &:before,
+    &:after
+      background-color $main
+      center()
+      content ''
+      position absolute
+      transition $transition
+    &:before
+      height 2px
+      width 12px
+    &:after
+      height 12px
+      width 2px
+    &_active
+      border-color #aaa
+      &:before
+        opacity 0
+      &:after
+        transform rotate(90deg)
 
 @media(max-width 767px)
   .apps
+    &__header
+      border-bottom 0
+      display block
+      padding-bottom 0
+      .apps__item.apps__item_left
+        display none
+    &__body
+      display block
+      .apps__item
+        display none
     &__item
+      margin-bottom 1.6rem
       &_left
         max-width 50%
         width initial
-
+      &_highlight
+        &:before
+          display none
+    &__product
+      &__top
+        border-bottom $border
+        flex-direction initial
+        justify-content space-between
+      &__left
+        min-width 12rem
+    &__item_highlight
+      background-color transparent
 
 
 

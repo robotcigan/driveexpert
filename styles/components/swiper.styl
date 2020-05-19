@@ -9,6 +9,7 @@
     &-bullet
       background-color #ddd
       opacity 1
+      margin 0 1rem !important
       &-active
         background-color $primary
   &-button-prev,
@@ -50,6 +51,38 @@
         opacity 1
         transform none
 
+.tracks
+  .swiper
+    &-pagination
+      margin-bottom 0
+      position relative
+      transform translateY(-4.8rem)
+      z-index 1000
+      &-bullet
+        background-color #fff
+        &-active
+          background-color $primary
+    &-buttons-wrapper
+      align-items center
+      display flex
+      height 100%
+      position absolute
+      top 0
+      width 100%
+    &-buttons-container
+      display flex
+      justify-content flex-end
+      // transform translateY(2.4rem)
+    &-button-prev,
+    &-button-next
+      flex-shrink 0
+      margin 0
+      position relative
+      transform translateY(-3.2rem)
+    &-button-prev
+      margin-right 6.4rem
+
+
 
 
 @media(max-width 1200px)
@@ -58,3 +91,7 @@
       left 0
     &-button-next
       right 0
+  .tracks
+    .swiper
+      &-buttons-container
+        display none

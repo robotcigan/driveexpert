@@ -78,6 +78,19 @@ $(document).ready(function() {
     }
   });
 
+  let trackSlider = new Swiper('.tracks .swiper-container', {
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+
   // $('.swiper-button-next').on('click', function() {
   //   console.log('some')
   // })
@@ -122,6 +135,21 @@ $(document).ready(function() {
     // $('.faq .faq__text').slideUp();
     $(this).closest('.faq').toggleClass('faq_active');
     $(this).closest('.faq').find('.faq__text').stop().slideToggle();
+  });
+
+  // apps mobile
+  $('.apps__product').append('<div class="apps__mobile"><div class="apps__mobile-container"><div class="apps__mobile-text"></div><div class="apps__mobile-value"></div></div></div>');
+  $('.apps__product').each(function() {
+    let index = $(this).closest('.apps__item').index();
+    let appsText = $('.apps__body .apps__item_left .apps__line').clone();
+    let appsValue = $('.apps__body .apps__item').eq(index).clone();
+    $(this).find('.apps__mobile-text').append(appsText);
+    $(this).find('.apps__mobile-value').append(appsValue);
+  });
+
+  $('.apps__open').on('click', function() {
+    $(this).toggleClass('apps__open_active');
+    $(this).closest('.apps__item').find('.apps__mobile').slideToggle();
   })
 
   // SVG magic

@@ -1,9 +1,6 @@
 .faq
-  border-bottom $border
-  &:first-child
-    .faq
-      &__title
-        padding-top 0
+  &:not(:last-child)
+    border-bottom $border
   &__container
     position relative
   &__top
@@ -11,40 +8,46 @@
     cursor pointer
     display flex
     justify-content space-between
-    &:hover
-      .faq
-        &__arrow
-          img
-            filter invert(100%)
-          &:after
-            transform none
   &__arrow
-    circleHover(4rem, #eee)
+    border-radius 50%
+    border $border
+    flex-shrink 0
     position relative
+    size(4rem)
     transition $transition
+    &:before,
     &:after
-      background-color $second
-    img
+      background-color $main
+      center()
+      content ''
+      position absolute
       transition $transition
+    &:before
+      height 2px
+      width 12px
+    &:after
+      height 12px
+      width 2px
   &__title
-    font-size 2.4rem
+    font-size 1.8rem
+    font-weight 800
     line-height 1.2
     padding 1em 0
     padding-right 1.5em
   &__text
     display none
     color $gray-text
-    padding-right 12rem
+    // padding-right 12rem
     p
       color $gray-text
   &_active
     .faq
       &__arrow
-        transform rotate(180deg)
+        border-color #aaa
         &:before
-          background-color $gray
-        img
-          filter invert(100%)
+          opacity 0
+        &:after
+          transform rotate(90deg)
 
 
 

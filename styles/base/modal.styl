@@ -13,7 +13,7 @@
     display flex
     justify-content space-between
   &__left
-    margin-right 8rem
+    margin-right 4rem
     padding 8rem
     width 100%
     img
@@ -34,6 +34,10 @@
         height 100%
         object-fit cover
         width 100%
+    &_form
+      background-color $light-gray
+      max-width 48rem
+      padding 8rem 4.8rem
 
 
 .fancybox-can-swipe .fancybox-content, .fancybox-can-pan .fancybox-content
@@ -61,7 +65,14 @@
 
 @media(max-width 1000px)
   .modal
-    // width 96%
+    &__body
+      flex-direction column
+    &__right
+      order -1
+      &-img
+        height 56rem
+      &_form
+        max-width initial
     &__left
       padding 2.4rem
       margin-right 0
@@ -69,14 +80,9 @@
 
 @media(max-width 767px)
   .modal
-    &_person
-      .modal
-        &__body
-          flex-direction column
-        &__right
-          order -1
-          &-img
-            height 32rem
+    &__right
+      &_form
+        padding 2.4rem
 
 
 

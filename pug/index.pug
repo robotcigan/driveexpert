@@ -214,6 +214,41 @@ block content
         .modal__right-img
           +webp('denis-modal', 'jpg')
 
+  .modal(id="support")
+    .modal__body
+      .modal__left
+        .modal__title Поддержка
+        p Если у вас возникли вопросы или вы нашли ошибку, можете написать на 
+          a(href="mailto:support@driveexpert.ru") support@driveexpert.ru
+          |  или в форму обратной связи
+        hr
+        - for (var a = 0; a < 4; a++)
+          .faq
+            .faq__container
+              .faq__top
+                .faq__title В чём отличие Drive Expert от других LapTimer-ов?
+                .faq__arrow
+              .faq__text
+                p Направленный маркетинг версифицирован. Воздействие на потребителя директивно изменяет сегмент рынка. Построение бренда, анализируя результаты рекламной кампании, детерминирует потребительский медиамикс
+      .modal__right.modal__right_form
+        .modal__title Форма обратной связи
+        .form
+          .form-control
+            .form-control__label Как вас зовут?
+            input(type="text")
+          .form-control
+            .form-control__label Электронная почта
+            input(type="email")
+          .form-control
+            .form-control__label Суть проблемы
+            textarea
+          small Нажимая кнопку «Отправить» вы даете согласие на 
+            a(href="") обработку ваших персональных данных
+          .btn
+            .btn__text Отправить
+
+
+
   .modal(id="records-modal")
     .modal__body
       .modal__left

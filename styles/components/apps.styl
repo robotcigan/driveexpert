@@ -52,8 +52,13 @@
       align-items center
       display flex
       flex-direction column
+    &__left
+      align-items center
+      display flex
+      flex-direction column
   &__mobile
     display none
+    padding 1em 0
     &-text
       width 80%
     &-value
@@ -83,6 +88,7 @@
   &__open
     border-radius 50%
     border $border
+    display none
     position relative
     size(4rem)
     transition $transition
@@ -132,9 +138,12 @@
         flex-direction initial
         justify-content space-between
       &__left
+        display block
         min-width 12rem
     &__item_highlight
       background-color transparent
+    &__open
+      display block
 
 
 

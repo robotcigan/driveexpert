@@ -16,7 +16,7 @@ $(document).ready(function () {
   HeaderScroll();
 
   // Переход по якорям
-  $('.anchor').on('click', function (event) {
+  $('.anchor, .footer-anchor').on('click', function (event) {
     event.preventDefault();
     var id = $(this).attr('href');
     var top = $(id).offset().top;

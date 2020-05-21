@@ -15,7 +15,7 @@ $(document).ready(function() {
 
 
   // Переход по якорям
-  $('.anchor').on('click', function (event) {
+  $('.anchor, .footer-anchor').on('click', function (event) {
     event.preventDefault();
     let id  = $(this).attr('href');
     let top = $(id).offset().top;

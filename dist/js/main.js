@@ -23,13 +23,14 @@ $(document).ready(function () {
     $('body, html').animate({ scrollTop: top - 140 }, 800);
   });
 
-  $('.mobile-menu__link').on('click', function (event) {
-    event.preventDefault();
-    var id = $(this).attr('href'),
-        top = $(id).offset().top;
-    $('body, html').animate({ scrollTop: top - 20 }, 800);
+  $('.mobile-anchor').on('click', function (event) {
+    // event.preventDefault();
+    var id = $(this).attr('href');
+    var top = $(id).offset().top;
+    $('body, html').animate({ scrollTop: top - 60 }, 800);
     $('.mobile-menu').slideUp();
-    $('.burger').removeClass('burger--active');
+    $('.mobile-menu').removeClass('mobile-menu_active');
+    $('.burger').removeClass('burger_active');
   });
 
   // burger

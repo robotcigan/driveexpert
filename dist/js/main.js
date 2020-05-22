@@ -138,8 +138,8 @@ $(document).ready(function () {
   $('.apps__product').append('<div class="apps__mobile"><div class="apps__mobile-container"><div class="apps__mobile-text"></div><div class="apps__mobile-value"></div></div></div>');
   $('.apps__product').each(function () {
     var index = $(this).closest('.apps__item').index();
-    var appsText = $('.apps__body .apps__item_left .apps__line').clone();
-    var appsValue = $('.apps__body .apps__item').eq(index).clone();
+    var appsText = $(this).closest('.apps').find('.apps__body .apps__item_left .apps__line').clone();
+    var appsValue = $(this).closest('.apps').find('.apps__body .apps__item').eq(index).clone();
     $(this).find('.apps__mobile-text').append(appsText);
     $(this).find('.apps__mobile-value').append(appsValue);
   });

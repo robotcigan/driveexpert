@@ -5,68 +5,131 @@ section.section.apps-section#buy
   .tabs
     .tabs__header
       .tabs__links
-        .tabs__link Android
+        .tabs__link.tabs__link_active Android
         .tabs__link iOs
+    .tabs__content.tabs__content_active
+      .apps
+        .apps__header
+          .apps__item.apps__item_left Функционал
+          .apps__item
+            .apps__product
+              .apps__product__top
+                .apps__product__left
+                  .apps__name Lap Timer
+                  .apps__price
+                    span $
+                    | 5
+                .apps__button
+                  .btn
+                    .btn__text Купить
+                .apps__open
+          .apps__item.apps__item_highlight
+            .apps__product
+              .apps__product__top
+                .apps__product__left
+                  .apps__name Lite
+                  .apps__price
+                    span $
+                    | 20
+                .apps__button
+                  .btn
+                    .btn__text Купить
+                .apps__open
+          .apps__item
+            .apps__product
+              .apps__product__top
+                .apps__product__left
+                  .apps__name Pro
+                  .apps__price
+                    span $
+                    | 200
+                .apps__button
+                  .btn
+                    .btn__text Купить
+                .apps__open
+        .apps__body
+          .apps__item.apps__item_left
+            .apps__line Время прохождения круга с секторами и оптимальный круг
+            .apps__line Библиотека треков >2000 готовых гоночных трасс по всему миру
+            .apps__line Пользовательские пользовательские схемы и двухточечные дорожки
+            .apps__line Советы и консультации в реальном времени во время прохождения трассы
+            .apps__line Прогнозируемый временной круг и дельта-график времени
+            .apps__line Аппаратный ускоренный экспорт видео с настраиваемым наложением данных
+            .apps__line Запись с нескольких камер и экспорт видео в картинке
+            .apps__line Запись видео с использованием внутренней камеры
+            .apps__line Дистанционное управление экшн-камерами GoPro® HERO
 
-  .apps
-    .apps__header
-      .apps__item.apps__item_left Функционал
-      .apps__item
-        .apps__product
-          .apps__product__top
-            .apps__product__left
-              .apps__name Lap Timer
-              .apps__price
-                span $
-                | 5
-            .apps__button
-              .btn
-                .btn__text Купить
-            .apps__open
-      .apps__item.apps__item_highlight
-        .apps__product
-          .apps__product__top
-            .apps__product__left
-              .apps__name Lite
-              .apps__price
-                span $
-                | 20
-            .apps__button
-              .btn
-                .btn__text Купить
-            .apps__open
-      .apps__item
-        .apps__product
-          .apps__product__top
-            .apps__product__left
-              .apps__name Pro
-              .apps__price
-                span $
-                | 200
-            .apps__button
-              .btn
-                .btn__text Купить
-            .apps__open
-    .apps__body
-      .apps__item.apps__item_left
-        .apps__line Время прохождения круга с секторами и оптимальный круг
-        .apps__line Библиотека треков >2000 готовых гоночных трасс по всему миру
-        .apps__line Пользовательские пользовательские схемы и двухточечные дорожки
-        .apps__line Советы и консультации в реальном времени во время прохождения трассы
-        .apps__line Прогнозируемый временной круг и дельта-график времени
-        .apps__line Аппаратный ускоренный экспорт видео с настраиваемым наложением данных
-        .apps__line Запись с нескольких камер и экспорт видео в картинке
-        .apps__line Запись видео с использованием внутренней камеры
-        .apps__line Дистанционное управление экшн-камерами GoPro® HERO
+          .apps__item
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-check.svg")
 
-      .apps__item
-        - for (var i = 0; i < 9; i++)
-          .apps__line: img(src="./img/apps-minus.svg")
+          .apps__item.apps__item_highlight
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-minus.svg")
 
-      .apps__item.apps__item_highlight
-        - for (var i = 0; i < 9; i++)
-          .apps__line: img(src="./img/apps-check.svg")
+          .apps__item
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-check.svg")
+    .tabs__content
+      .apps
+        .apps__header
+          .apps__item.apps__item_left Функционал
+          .apps__item
+            .apps__product
+              .apps__product__top
+                .apps__product__left
+                  .apps__name Lap Timer
+                  .apps__price
+                    span $
+                    | 5
+                .apps__button
+                  .btn
+                    .btn__text Купить
+                .apps__open
+          .apps__item.apps__item_highlight
+            .apps__product
+              .apps__product__top
+                .apps__product__left
+                  .apps__name Lite
+                  .apps__price
+                    span $
+                    | 20
+                .apps__button
+                  .btn
+                    .btn__text Купить
+                .apps__open
+          .apps__item
+            .apps__product
+              .apps__product__top
+                .apps__product__left
+                  .apps__name Pro
+                  .apps__price
+                    span $
+                    | 200
+                .apps__button
+                  .btn
+                    .btn__text Купить
+                .apps__open
+        .apps__body
+          .apps__item.apps__item_left
+            .apps__line Время прохождения круга с секторами и оптимальный круг
+            .apps__line Библиотека треков >2000 готовых гоночных трасс по всему миру
+            .apps__line Пользовательские пользовательские схемы и двухточечные дорожки
+            .apps__line Советы и консультации в реальном времени во время прохождения трассы
+            .apps__line Прогнозируемый временной круг и дельта-график времени
+            .apps__line Аппаратный ускоренный экспорт видео с настраиваемым наложением данных
+            .apps__line Запись с нескольких камер и экспорт видео в картинке
+            .apps__line Запись видео с использованием внутренней камеры
+            .apps__line Дистанционное управление экшн-камерами GoPro® HERO
 
-      .apps__item
-        - for (var i = 0; i < 9; i++)
-          .apps__line: img(src="./img/apps-check.svg")
+          .apps__item
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-minus.svg")
+
+          .apps__item.apps__item_highlight
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-check.svg")
+
+          .apps__item
+            - for (var i = 0; i < 9; i++)
+              .apps__line: img(src="./img/apps-check.svg")

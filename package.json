@@ -16,7 +16,7 @@
     "imagemin-webp": "^5.1.0",
     "jquery": "^3.2.1",
     "splitting": "^1.0.6",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "wow.js": "^1.2.2"
   },
   "devDependencies": {
